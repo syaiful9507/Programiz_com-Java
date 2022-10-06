@@ -1,5 +1,7 @@
 package operators;
 
+import java.util.Scanner;
+
 //see tutorial https://www.programiz.com/java-programming/operators
 public class Arithmetic {
     public static void main(String[] args) {
@@ -16,6 +18,24 @@ public class Arithmetic {
         System.out.println("a / b = " + (a / c));
         //modulo operator
         System.out.println("a % b = " + (a % b));
+
+        System.out.println("=========================");
+        double fee = 1536, discountPercent = 10;
+        //compute discount amount
+        double discount = fee * (discountPercent/100);
+        double finalFee = fee - discount;
+        System.out.println(discount);
+        System.out.println(finalFee);
+
+        System.out.println("========== INPUT SCANNER ===========");
+        System.out.print("Masukkan celsius : ");
+        Scanner input = new Scanner(System.in);
+        Double celsius = input.nextDouble();
+        double fahrenheit = (celsius * 1.8) + 13;
+
+        System.out.println("Fahrenheit is : " + (fahrenheit));
+        input.close();
+
 
 
         /*
