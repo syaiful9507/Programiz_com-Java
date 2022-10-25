@@ -16,27 +16,42 @@ public class Main {
         return choice;
     }
 
-    String getResult(String name){
-        Main obj = new Main();
-        String nameTolower = name.toLowerCase();
-        String result;
-        if ((name == "rock" && obj.getRandomChoice() == "scissors") || (name == "paper" && obj.getRandomChoice() == "rock") || (name == "scissors" && obj.getRandomChoice() == "paper")){
-            result = "You Win";
-        } else if (name.equals(obj.getRandomChoice())){
-            result = "drew";
+    String getUserInput() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Pick Name (rock, paper, scissors : ");
+        String userInput = in.nextLine();
+        userInput = userInput.toLowerCase();
+        return userInput;
+    }
+    String getResult(String userPick, String comPick){
+
+        if (userPick.equals(comPick)) {
+            return "Draw";
+        }  else if (userPick.equals("rock") && comPick.equals("scissors")){
+            return "WIN";
+        } else if (userPick.equals("paper")  && comPick.equals("rock")) {
+            return  "WIN";
+        } else if (userPick.equals("scissors") && comPick.equals("paper")) {
+            return  "WIN";
         } else {
-            result = "Fail";
+            return  "LOSE";
         }
-        return result;
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Pick Name : ");
-        String pickName = in.next();
         Main obj = new Main();
-        String result = obj.getResult(pickName);
+        String userInput = obj.getUserInput();
+        String randomChoice = obj.getRandomChoice();
+        String result = obj.getResult(userInput, randomChoice);
+        System.out.println("--------------COMPARE---------------------");
+        System.out.println("You Pick\t\t\t: " + userInput);
+        System.out.println("Computer Pick\t\t: " + randomChoice);
+
+
+        System.out.println("--------------RESULT---------------------");
         System.out.println(result);
+        System.out.println("-----------------------------------------");
+
 
     }
 }
