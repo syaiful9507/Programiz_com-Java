@@ -1,4 +1,4 @@
-package loop.challenges;
+package challenges;
 /*
 Problem Description
 - Create a program to count the number of digits in an integer.

@@ -1,4 +1,4 @@
-package loop.challenges.method;
+package challenges.method;
 
 public class CheckifTwoArgumentsAreEqual {
     String myMethod(int num1, int num2){

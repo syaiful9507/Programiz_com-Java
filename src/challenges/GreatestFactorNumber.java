@@ -1,6 +1,4 @@
-package loop.challenges;
-
-import java.util.Scanner;
+package challenges;
 
 public class GreatestFactorNumber {
     public static void main(String[] args) {

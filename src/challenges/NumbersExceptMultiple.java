@@ -1,4 +1,4 @@
-package loop.challenges;
+package challenges;
 
 public class NumbersExceptMultiple {
     /*

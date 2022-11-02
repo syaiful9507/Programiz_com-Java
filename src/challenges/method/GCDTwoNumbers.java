@@ -1,4 +1,4 @@
-package loop.challenges.method;
+package challenges.method;
 
 import java.util.Scanner;
 
