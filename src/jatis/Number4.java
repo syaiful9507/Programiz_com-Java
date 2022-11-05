@@ -1,9 +1,5 @@
 package jatis;
 
-import basicProgram.challenges.method.CheckPrimeNumber;
-
-import java.util.Scanner;
-
 public class Number4 {
     public static void main(String[] args) {
         int primeFlag = 0;
