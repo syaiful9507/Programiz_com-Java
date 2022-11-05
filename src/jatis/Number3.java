@@ -9,8 +9,8 @@ public class Number3 {
         String text = in.nextLine();
         String temp = String.valueOf(text.charAt(0));
         int flage = 0;
-        for (int i = 1; i < text.length(); i++) {
 
+        for (int i = 1; i < text.length(); i++) {
             for (int j = 0; j < temp.length(); j++) {
                 if (text.charAt(i) == temp.charAt(j)){
                     flage++;
@@ -22,6 +22,7 @@ public class Number3 {
             }
             flage = 0;
         }
+
         temp = temp.replaceAll("\\s", "");
         text = text.replaceAll("\\s", "");
         int count = 0;
@@ -31,7 +32,6 @@ public class Number3 {
                     count++;
                 }
             }
-
             if (count > 1){
                 System.out.print(count);
                 System.out.print(temp.charAt(i));

@@ -1,14 +1,40 @@
 package jatis;
 
 public class Number5 {
-    String suara;
-    String rantai = "Normal";
 
 
     public static void main(String[] args) {
+        Sepeda Sepeda = new Sepeda();
+        Sepeda.akselerasi("Swoosh");
+        Sepeda.rantai("s");
 
-        Number5 Kendaraan = new Number5();
-        Number5 Sepeda = new Number5();
+    }
+}
+class Kendaraan {
+    String suara;
+    void akselerasi(String suara){
+        System.out.println(suara);
+    }
+}
 
+class Sepeda extends Kendaraan {
+    String rantai = "Normal";
+
+    @Override
+    void akselerasi(String suara) {
+        super.akselerasi(suara);
+    }
+    void rantai(String rantai) {
+        rantai = this.rantai;
+        System.out.println(rantai);
+    }
+}
+class Mobil extends Kendaraan {
+    String bensin = "Penuh";
+
+    @Override
+    void akselerasi(String suara) {
+        super.akselerasi(suara);
+        //System.out.println(bensin);
     }
 }
