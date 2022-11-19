@@ -14,16 +14,9 @@ public class Rectangle {
         this.length = length;
         this.breadth = breadth;
     }
-    int computeArea(){
+    int computeAreaRectangle(){
         int area = this.length * this.breadth;
         return area;
     }
 }
 
-class Main {
-    public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(2, 8);
-        int result = rectangle.computeArea();
-        System.out.println(result);
-    }
-}
