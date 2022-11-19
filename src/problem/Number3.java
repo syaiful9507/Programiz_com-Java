@@ -1,4 +1,4 @@
-package jatis;
+package problem;
 
 import java.util.Scanner;
 
