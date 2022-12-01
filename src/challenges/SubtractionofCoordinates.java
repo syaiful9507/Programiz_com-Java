@@ -1,5 +1,10 @@
 package challenges;
-/*
+
+
+
+import java.util.Scanner;
+class Question{
+    /*
 Challenge:
 Subtraction of Coordinates (level Medium)
 
@@ -31,8 +36,7 @@ Test Input
 8
 
  */
-import java.util.Scanner;
-
+}
 class Coordinate{
     int x , y;
     Coordinate(int x, int y){
