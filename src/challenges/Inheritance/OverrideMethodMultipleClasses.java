@@ -1,4 +1,7 @@
 package challenges.Inheritance;
+
+import java.util.Scanner;
+
 class questionOverrideMultiple{
 /*
 Override Method in Multiple Classes
@@ -30,11 +33,30 @@ class Animal {
     void display(){
         System.out.println("I am an animal");
     }
+    void eat(){
+        System.out.println("I eat animal food");
+    }
 }
-class Dog extends Animal {
+class Mammal extends Animal {
     @Override
     void display() {
+        System.out.println("I am a mammal");
+    }
+}
+class Dog extends Mammal {
+    @Override
+    void display() {
+        super.display();
         System.out.println("I am a dog");
+    }
+
+    @Override
+    void eat() {
+        super.eat();
+    }
+
+    void displayName(String name){
+        System.out.println(name);
     }
 }
 class Cat extends Animal {
@@ -45,9 +67,15 @@ class Cat extends Animal {
 }
 public class OverrideMethodMultipleClasses {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
         Dog dog = new Dog();
         Cat cat = new Cat();
         dog.display();
         cat.display();
+        dog.displayName(name);
+        dog.display();
+        dog.eat();
+
     }
 }
