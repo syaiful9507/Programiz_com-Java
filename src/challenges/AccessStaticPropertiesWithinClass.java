@@ -22,18 +22,16 @@ MIT
 
 import java.util.Scanner;
 
-class College {
+public class AccessStaticPropertiesWithinClass {
     static String name;
     static void display(){
         System.out.println(name);
     }
-}
-public class AccessStaticPropertiesWithinClass {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String inputName = in.nextLine();
-        College.name = inputName;
-        College.display();
+        name = inputName;
+        display();
 
     }
 }
